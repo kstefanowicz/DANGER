@@ -1,1 +1,1 @@
-currentMove = "";
+currentMove = 15;

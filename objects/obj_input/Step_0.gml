@@ -1,12 +1,12 @@
-scr_read_inputs();
+readInputs();
 
-scr_update_chain();
+updateChain();
 
-scr_update_chain_unique();
+updateChain_unique();
 
-scr_clean_chains()
+cleanChains()
 
 // Check for move input matches
 for (var moveIndex = 0; moveIndex < ds_grid_width(movesGrid); moveIndex++){
-	scr_check_move(movesGrid[# moveIndex, 0], moveIndex);
+	checkMove(movesGrid[# moveIndex, 0], moveIndex);
 }

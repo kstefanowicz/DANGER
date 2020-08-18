@@ -1,7 +1,7 @@
-scr_define_chains()
+defineChains()
 
-scr_define_moves();
-currentMove = "Neutral";
+defineMoves();
+currentMove = 15;
 
 // enum for directional outputs for easier reference
 enum outputsD {
