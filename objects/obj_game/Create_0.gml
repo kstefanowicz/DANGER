@@ -1,0 +1,10 @@
+global.bindUp = "W";
+global.bindDown = "S";
+global.bindLeft = "A";
+global.bindRight = "D";
+global.bindLP = "U";
+global.bindMP = "I";
+global.bindHP = "O";
+global.bindLK = "J";
+global.bindMK = "K";
+global.bindHK = "L";
