@@ -1,7 +1,5 @@
 defineChains()
 
-defineMoves();
-currentMove = 15;
 
 // enum for directional outputs for easier reference
 enum outputsD {

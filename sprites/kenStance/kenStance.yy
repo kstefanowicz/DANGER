@@ -104,8 +104,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4e77bea2-5dca-485b-830e-ae93e0133693","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Ken",
+    "path": "folders/Sprites/Ken.yy",
   },
   "resourceVersion": "1.0",
   "name": "kenStance",

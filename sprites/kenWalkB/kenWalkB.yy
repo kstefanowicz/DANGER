@@ -108,8 +108,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"69df5097-4503-49b6-9854-f0165b2e2112","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Ken",
+    "path": "folders/Sprites/Ken.yy",
   },
   "resourceVersion": "1.0",
   "name": "kenWalkB",

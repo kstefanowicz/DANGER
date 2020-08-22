@@ -168,8 +168,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b57261bd-23fb-4a90-9d23-212ab8ef71ea","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Ken",
+    "path": "folders/Sprites/Ken.yy",
   },
   "resourceVersion": "1.0",
   "name": "kenHPclose",
