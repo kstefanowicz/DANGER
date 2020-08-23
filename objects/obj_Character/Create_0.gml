@@ -1,18 +1,22 @@
 input = obj_input;
 
-states = ["Idle", "WalkF", "WalkB", 
-	"StandLP", "StandMP", "StandHP", "StandLK", "StandMK", "StandHK"]
-
+//Initialize
 currentState = "Idle";
-
-walkSpeed = 300;
-
 moveTimer = 0;
-
-isFacingRight = true;
-
 animation_init();
+defineFacing(true);
+groundLevel = yPos;
 
-defineFacing(isFacingRight);
 
-defineMoves();
+// Status attributes
+isGrounded = true;
+isCrouching = false;
+isInvulnerable = false;
+isUnthrowable = false;
+isProjectileInvul = false;
+isFacingRight = true;
+isLoop = true;
+
+// Default character values
+walkSpeed = 300;
+jumpSpeed = 50;

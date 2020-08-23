@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 4,
+  "origin": 7,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -155,7 +155,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 50,
-    "yorigin": 61,
+    "yorigin": 123,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"kenHPclose","path":"sprites/kenHPclose/kenHPclose.yy",},
@@ -173,6 +173,8 @@
   },
   "resourceVersion": "1.0",
   "name": "kenHPclose",
-  "tags": [],
+  "tags": [
+    "Ken",
+  ],
   "resourceType": "GMSprite",
 }

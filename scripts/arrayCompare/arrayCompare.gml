@@ -1,10 +1,7 @@
 ///@description compareArray
 ///@arg arr1
 ///@arg arr2
-function arrayCompare(argument0, argument1) {
-
-	var arr0 = argument0;
-	var arr1 = argument1; 
+function arrayCompare(arr0, arr1) {
 
 	if (array_length(arr0) != array_length(arr1)){ return false;}
 

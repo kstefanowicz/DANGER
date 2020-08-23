@@ -1,1 +1,0 @@
-currentMove = 15;

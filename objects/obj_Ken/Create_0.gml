@@ -1,3 +1,2 @@
+characterMoves = defineMovesKen;
 event_inherited();
-defineMovesKen();
-sprite = kenStance;

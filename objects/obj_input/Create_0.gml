@@ -1,6 +1,5 @@
 defineChains()
 
-
 // enum for directional outputs for easier reference
 enum outputsD {
 	up = "0", down = "1", 
@@ -12,13 +11,9 @@ enum outputsD {
 
 // Initial directional input
 currentDirection = outputsD.neutral;
-// String conversions of directional index=es
-directionStr = ["U", "D", "L", "R", "U/L", "U/R", "D/L", "D/R", "N"]
 
 // Initial buttons input
 currentButtons = [false, false, false, false, false, false]
-// String conversion of buttons indexes
-currentButtonsStr = ["LP", "MP", "HP", "LK", "MK", "HK"]
 
 // Arrow by Poups from the Noun Project
 // Fist by Andrew Doane from the Noun Project

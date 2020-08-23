@@ -1,10 +1,7 @@
 /// @description updateEdgeChains(oldArr, newArr)
 /// @arg oldArr
 /// @arg newArr
-function updateEdgeChains() {
-
-	var oldArr = argument[0];
-	var newArr = argument[1];
+function updateEdgeChains(oldArr, newArr) {
 
 	var outArrDown = [0,0,0,0,0,0]
 	var outArrUp = [0,0,0,0,0,0]

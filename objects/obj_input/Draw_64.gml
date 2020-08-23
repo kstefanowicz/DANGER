@@ -34,5 +34,3 @@ for (var i = 0; i < ds_list_size(input_chain_buttons_unique); i++){
 	}
 	ds_list_destroy(buttonsActiveIcon);
 }
-
-draw_set_halign(fa_center);

@@ -3,10 +3,25 @@
 
 
 function defineMovesKen(){	
+
+#region Inputs
+
+#region Movement
+var dash = [dir_toward, outputsD.neutral, dir_toward];
+
+#endregion
+
+#region Normals
+	var normalLP = [[1,0,0,0,0,0]];
+	var normalMP = [[0,1,0,0,0,0]];
+	var normalHP = [[0,0,1,0,0,0]];
+	var normalLK = [[0,0,0,1,0,0]];
+	var normalMK = [[0,0,0,0,1,0]];
+	var normalHK = [[0,0,0,0,0,1]];
 	
-	enum statesSpecial{fireballL, fireballM, fireballH,
-			uppercutL, uppercutM, uppercutH,
-			tatsuLK, tatsuMK, tatsuHK}
+	
+#endregion			
+			
 #region Specials
 	var fireballLP = [outputsD.down, dir_downToward, dir_toward, [1,0,0,0,0,0]];
 	var fireballMP = [outputsD.down, dir_downToward, dir_toward, [0,1,0,0,0,0]];
@@ -21,10 +36,40 @@ function defineMovesKen(){
 	var dragonPunchHP = [dir_toward, outputsD.down, dir_downToward, [0, 0, 1, 0, 0, 0]];
 #endregion
 
-	movesListSpecial = ["Tatsu H"];
+#endregion
 
-	ds_map_add(movesInput, "Tatsu H", hurricaneKickHK);
-	ds_map_add(movesSprite, "Tatsu H", kenTatsuH);
-	ds_map_add(movesState, "Tatsu H", "Tatsu HK");
-	ds_map_add(moveLength, "Tatsu H", 127);
+	movesList = ["Dash", "Stand HP", "Fireball L", "Fireball M", "Fireball H", "Tatsu H"];
+	
+#region Movement
+
+	createMove("Dash", dash, kenDash, 17, 32, 1, 1);
+
+#endregion
+		
+		
+#region Normals
+
+	createMove("Stand HP", normalHP, kenHPclose, 26, 60, buttonPriority.HP, typePriority.normal);
+
+#endregion
+	
+
+#region Specials
+	#region Tatsu
+	
+		createMove("Tatsu H", hurricaneKickHK, kenTatsuH, 120, 16, buttonPriority.HK, typePriority.special);
+	
+	#endregion
+	
+	#region Fireball
+	
+		createMove("Fireball L", fireballLP, kenFireball, 55, 16, buttonPriority.LP, typePriority.special);
+		createMove("Fireball M", fireballMP, kenFireball, 55, 16, buttonPriority.LP, typePriority.special);
+		createMove("Fireball H", fireballHP, kenFireball, 55, 16, buttonPriority.LP, typePriority.special);
+	
+	#endregion
+	#region Dragon Punch
+	
+	#endregion
+#endregion
 }

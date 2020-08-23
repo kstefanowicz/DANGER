@@ -1,8 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function defineFacing(){
-	var rightFacing = argument[0];
-	
+function defineFacing(rightFacing){	
 	if (rightFacing){
 		dir_downToward = outputsD.downRight;
 		dir_toward = outputsD.right;
@@ -24,5 +22,8 @@ function defineFacing(){
 		
 		facing = -1;
 	}
+	
+	initializeMoves();
+	script_execute(characterMoves);
 	
 }
