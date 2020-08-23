@@ -38,7 +38,10 @@ var dash = [dir_toward, outputsD.neutral, dir_toward];
 
 #endregion
 
-	movesList = ["Dash", "Stand HP", "Fireball L", "Fireball M", "Fireball H", "Tatsu H"];
+	movesList = ["Dash", 
+		"Stand LP", "Stand MP", "Stand HP", "Stand LK", "Stand MK", "Stand HK",
+		"Fireball L", "Fireball M", "Fireball H", 
+		"Tatsu L", "Tatsu M", "Tatsu H"];
 	
 #region Movement
 
@@ -49,14 +52,20 @@ var dash = [dir_toward, outputsD.neutral, dir_toward];
 		
 #region Normals
 
-	createMove("Stand HP", normalHP, kenHPclose, 26, 60, buttonPriority.HP, typePriority.normal);
+	createMove("Stand LP", normalLP, kenLPfar, 15, 12, buttonPriority.LP, typePriority.normal);
+	createMove("Stand MP", normalMP, kenMPfar, 31, 14, buttonPriority.MP, typePriority.normal);
+	createMove("Stand HP", normalHP, kenHPfar, 25, 60, buttonPriority.HP, typePriority.normal);
+	createMove("Stand LK", normalLK, kenLKfar, 21, 14, buttonPriority.LK, typePriority.normal);
+	createMove("Stand MK", normalMK, kenMKfar, 49, 14, buttonPriority.MK, typePriority.normal);
+	createMove("Stand HK", normalHK, kenHKfar, 42, 14, buttonPriority.HK, typePriority.normal);
 
 #endregion
 	
 
 #region Specials
 	#region Tatsu
-	
+		createMove("Tatsu L", hurricaneKickLK, kenTatsuL, 48, 16, buttonPriority.LK, typePriority.special);
+		createMove("Tatsu M", hurricaneKickMK, kenTatsuM, 82, 16, buttonPriority.MK, typePriority.special);
 		createMove("Tatsu H", hurricaneKickHK, kenTatsuH, 120, 16, buttonPriority.HK, typePriority.special);
 	
 	#endregion

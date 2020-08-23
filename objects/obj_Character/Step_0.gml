@@ -2,15 +2,15 @@
 if (moveTimer == 0){
 	switch input.input_chain_direction[| 0]{
 		case dir_toward:
-			sprite = kenWalkF;
+			sprite = anim_walkF;
 			currentState = "WalkF";			
 			break;
 		case dir_back:
-			sprite = kenWalkB;
+			sprite = anim_walkB;
 			currentState = "WalkB";
 			break;		
 		default:
-			sprite = kenStance;
+			sprite = anim_idle;
 			currentState = "Idle";
 			break;
 	}
@@ -39,17 +39,17 @@ switch currentState{
 		
 	case "WalkF":
 		frameSpeed = 16/60;
-		xPos += facing * walkSpeed / room_speed;
+		x += facing * walkSpeed / room_speed;
 		break;
 		
 	case "WalkB":
-		xPos += facing * -walkSpeed / room_speed;
+		x += facing * -walkSpeed / room_speed;
 		frameSpeed = 16/60;
 		break;
 		
 	case "Dash":
 		if (moveTimer == 1){
-			xPos += 200;	
+			x += 200;	
 		}
 
 }
@@ -67,10 +67,15 @@ if (moveTimer > 0){
 xPos = clamp(xPos, sprite_width/2, window_get_width() - sprite_width/2)
 yPos = clamp(yPos, 0, groundLevel);
 
-
+// Flip facing direction
 if(keyboard_check_pressed(ord("M"))){
 	isFacingRight = !isFacingRight
 	defineFacing(isFacingRight)
+}
+
+with(hurtbox){
+    x = other.xPos + xOffset;
+    y = other.yPos + yOffset;
 }
 
 frame_counter();
