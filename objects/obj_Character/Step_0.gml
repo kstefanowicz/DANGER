@@ -35,6 +35,8 @@ for (var i = 0; i < array_length(movesList); i++){
 switch currentState{
 	case "Idle":
 		frameSpeed = 1;
+		hspeed = 0;
+		angle = 0;
 		break;
 		
 	case "WalkF":
@@ -51,6 +53,11 @@ switch currentState{
 		if (moveTimer == 1){
 			x += 200;	
 		}
+		break;
+		
+	case "Hit":
+		hit_state();
+		break;
 
 }
 
@@ -64,8 +71,8 @@ if (moveTimer > 0){
 }
 
 // Keep character on-screen and above the ground
-xPos = clamp(xPos, sprite_width/2, window_get_width() - sprite_width/2)
-yPos = clamp(yPos, 0, groundLevel);
+x = clamp(x, sprite_width/2, room_width - sprite_width/2)
+y = clamp(y, 0, groundLevel);
 
 // Flip facing direction
 if(keyboard_check_pressed(ord("M"))){
@@ -73,9 +80,44 @@ if(keyboard_check_pressed(ord("M"))){
 	defineFacing(isFacingRight)
 }
 
+//hurtbox
 with(hurtbox){
     x = other.xPos + xOffset;
     y = other.yPos + yOffset;
+}
+
+//hitbox
+if(hitbox != -1){
+    with(hitbox){
+        x = other.x + xOffset;
+        y = other.y + yOffset;
+    
+	
+		with(obj_hurtbox){
+			if(place_meeting(x, y, other) && other.owner != owner){
+				//ignore check
+	            //checking collision from the hitbox object
+	            with(other){
+	                //check to see if your target is on the ignore list
+	                //if it is on the ignore list, dont hit it again
+	                for(i = 0; i < ds_list_size(ignoreList); i ++){
+	                    if(ignoreList[|i] = other.owner){
+	                        ignore = true;
+	                        break;
+	                    }
+	                }
+
+	                //if it is NOT on the ignore list, hit it, and add it to
+	                //the ignore list
+	                if(!ignore){
+	                    other.owner.hit = true;
+	                    other.owner.hitBy = id;
+	                    ds_list_add(ignoreList,other.owner);
+	                }
+	            }
+			}
+		}
+	}
 }
 
 frame_counter();

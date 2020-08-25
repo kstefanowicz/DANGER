@@ -4,8 +4,8 @@ input = obj_input;
 currentState = "Idle";
 moveTimer = 0;
 animation_init();
-xScale = 2;
-yScale = 2;
+xScale = 1;
+yScale = 1;
 defineFacing(true);
 groundLevel = yPos;
 
@@ -30,3 +30,11 @@ anim_walkB = -1
 
 // Hurtbox
 hurtbox = -1;
+
+// Hitbox
+hitbox = -1;
+
+// Hit Status
+hit = false;
+hitStun = 0;
+hitBy = -1;

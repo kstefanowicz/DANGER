@@ -1,0 +1,1 @@
+window_set_position(100, 100);
