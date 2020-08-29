@@ -27,6 +27,7 @@
     {"id":{"name":"snd_announce_TheFutureIsUndeterminable","path":"sounds/snd_announce_TheFutureIsUndeterminable/snd_announce_TheFutureIsUndeterminable.yy",},"order":4,},
     {"id":{"name":"box_hurtbox","path":"sprites/box_hurtbox/box_hurtbox.yy",},"order":0,},
     {"id":{"name":"kenMPfar","path":"sprites/kenMPfar/kenMPfar.yy",},"order":13,},
+    {"id":{"name":"obj_cameraTarget","path":"objects/obj_cameraTarget/obj_cameraTarget.yy",},"order":3,},
     {"id":{"name":"obj_hitbox","path":"objects/obj_hitbox/obj_hitbox.yy",},"order":1,},
     {"id":{"name":"snd_announce_DANGER_Tracy","path":"sounds/snd_announce_DANGER_Tracy/snd_announce_DANGER_Tracy.yy",},"order":0,},
     {"id":{"name":"snd_announce_CircuitryIsThickerThanBlood_Tracy","path":"sounds/snd_announce_CircuitryIsThickerThanBlood_Tracy/snd_announce_CircuitryIsThickerThanBlood_Tracy.yy",},"order":1,},

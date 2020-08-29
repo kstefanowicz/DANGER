@@ -71,8 +71,10 @@ if (moveTimer > 0){
 }
 
 // Keep character on-screen and above the ground
-x = clamp(x, sprite_width/2, room_width - sprite_width/2)
-y = clamp(y, 0, groundLevel);
+if(instance_exists(obj_camera)){
+	x = clamp(x, obj_camera.cameraX + sprite_width/2, obj_camera.cameraX + obj_camera.cameraWidth - sprite_width/2)
+	y = clamp(y, 0, groundLevel);
+}
 
 // Flip facing direction
 if(keyboard_check_pressed(ord("M"))){

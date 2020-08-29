@@ -14,4 +14,8 @@ switch currentState{
 	break;
 }
 
+if(instance_exists(obj_camera)){
+	x = clamp(x, obj_camera.cameraX + sprite_width/2, obj_camera.cameraX + obj_camera.cameraWidth - sprite_width/2)
+}
+
 frame_counter();

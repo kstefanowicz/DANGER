@@ -3,7 +3,7 @@ if (room == rm_inGame){
 	// Camera
 	cameraX = 0;
 	cameraY = 0;
-	target = obj_Ken;
+	target = obj_cameraTarget;
 	
 	cameraWidth = 800;
 	cameraHeight = 450;

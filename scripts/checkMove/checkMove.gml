@@ -9,25 +9,29 @@ function checkMove(inMove) {
 	var checkStart = inputBufferSize;
 	for (var i = 0; i < array_length(moveToCheck); i++){
 		var isIn = false;
-		for (var j = inputBufferSize; j >= 0; j--){
-			if (obj_input.input_chain_direction[| j] == moveToCheck[i]
-			and checkStart >= j){
+		for (var j = checkStart; j >= 0; j--){
+			if (obj_input.input_chain_direction[| j] == moveToCheck[i]){
 				isIn = true;
 				checkStart = j;
 			}
 			if (is_array(obj_input.input_chain_buttons[| j]) && is_array(moveToCheck[i])){
 				if (array_equals(arrayAnd(obj_input.input_chain_buttons[| j], moveToCheck[i]), moveToCheck[i])
-				and array_equals(arrayAnd(obj_input.input_chain_buttons_down[| j], moveToCheck[i]), moveToCheck[i])
-				and checkStart >= j){
+				and array_equals(arrayAnd(obj_input.input_chain_buttons_down[| j], moveToCheck[i]), moveToCheck[i])){
 					isIn = true;
 					checkStart = j;
 				}
 			}
 		}
+		if(inMove == "Dash"){
+			show_debug_message(string(checkStart) + " " + string(moveToCheck[i]) + " " + string(isIn));
+		}
+		
 		if (!isIn){
 			isMatch = false;
 		}
 	}
+	
+	if(inMove == "Dash") show_debug_message("");
 
 	if (isMatch){
 		var replace = false;

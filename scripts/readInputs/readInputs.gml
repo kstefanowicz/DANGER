@@ -4,8 +4,8 @@ function readInputs() {
 #region Direction
 	// Check if left and/or right are being pressed
 	// and determine logic of resulting horizontal direction (L + R = N)
-	var ll = keyboard_check(ord(global.bindLeft));
-	var rr = keyboard_check(ord(global.bindRight));
+	var ll = keyboard_check(global.bindLeft);
+	var rr = keyboard_check(global.bindRight);
 	var outH = outputsD.neutral;
 	if (ll && rr){
 		outH = outputsD.neutral;
@@ -17,8 +17,8 @@ function readInputs() {
 
 	// Check if up and/or down are being pressed
 	// and determine logic of resulting vertical direction (U + D = U)
-	var uu = keyboard_check(ord(global.bindUp));
-	var dd = keyboard_check(ord(global.bindDown));
+	var uu = keyboard_check(global.bindUp);
+	var dd = keyboard_check(global.bindDown);
 	var outV = outputsD.neutral;
 	if (uu && dd){
 		outV = outputsD.up;
@@ -55,22 +55,22 @@ function readInputs() {
 
 #region Buttons
 	// Check to see if each button is being pressed
-	if (keyboard_check(ord(global.bindLP))){
+	if (keyboard_check(global.bindLP)){
 		currentButtons[0] = true;
 	} else currentButtons[0] = false;
-	if (keyboard_check(ord(global.bindMP))){
+	if (keyboard_check(global.bindMP)){
 		currentButtons[1] = true;
 	} else currentButtons[1] = false;
-	if (keyboard_check(ord(global.bindHP))){
+	if (keyboard_check(global.bindHP)){
 		currentButtons[2] = true;
 	} else currentButtons[2] = false;
-	if (keyboard_check(ord(global.bindLK))){
+	if (keyboard_check(global.bindLK)){
 		currentButtons[3] = true;
 	} else currentButtons[3] = false;
-	if (keyboard_check(ord(global.bindMK))){
+	if (keyboard_check(global.bindMK)){
 		currentButtons[4] = true;
 	} else currentButtons[4] = false;
-	if (keyboard_check(ord(global.bindHK))){
+	if (keyboard_check(global.bindHK)){
 		currentButtons[5] = true;
 	} else currentButtons[5] = false;
 #endregion
